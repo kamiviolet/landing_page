@@ -1,0 +1,1 @@
+the core structure copying from sample took 1hour 32mins.

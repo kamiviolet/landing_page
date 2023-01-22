@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kami Lam">
+    <meta name="description" content="Landing page.">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+    </style> 
+    <script src="https://kit.fontawesome.com/218242fbd9.js" crossorigin="anonymous"></script>
+    <title>Landing Page</title>
+</head>
+<body>
+  <header>
+    <div class="header-wrapper">
+      <p role="logo">Muchovice Mountain Estate</p>
+      <button class="nav_btn">
+        <div class="line top_line"></div>
+        <div class="line middle_line"></div>
+        <div class="line bottom_line"></div>
+      </button>
+      <nav role="responsive_navbar">
+        <a href="#home" class="menu_items">Home</a>
+        <a href="#info" class="menu_items">Facilities</a>
+        <a href="#reviews" class="menu_items">Reviews</a>
+        <a href="#book" class="menu_items">Book now</a> 
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section role="highlight" id="home">
+      <div class="content-wrapper">
+        <h1 role="main-title">Accommodation,<br>
+          horse riding <br>and eco-housing in the Beskydy Mountains</h1>
+        <p role="title-description">
+          Here in Muchovice, life moves more slowly. We will accommodate you in a log cabin in a quiet corner of Lysá hora. You will enjoy the peace of mountain solitude, where the best-preserved Beskydy forests, fragrant meadows, babbling brooks and waterfalls grow right behind the house. We keep a herd of Hucul horses, on which you can go with us on the mountain trails. Even a midsummer winter is tempting - walks in the sparkling snow, groomed cross-country tracks and slopes nearby.
+        </p>
+        <a href="#book"><button class="signup-btn action_background">Book now</button></a>
+      </div>
+    </section>
+
+    <section role="info" id="info">
+      <h2 role="info-title">Facilities</h2>
+    </section>
+
+    <section role="reviews" id="reviews">
+      <button class="to_left" onclick="changeReview(-1)"><</button>
+      <button class="to_right" onclick="showReview(1)">></button>
+      <div class="reviews_wrapper"></div>
+    </section>
+
+    <section role="signup" id="book">
+      <div class="signup-wrapper">
+        <h2>Contact us</h2>
+        <div class="signup-container">
+        <div class="signup-content-wrapper">
+            <p>Please fill out the form and press submit button. We would get back to you normally within a day for further details. Thank you!</p>
+            <p class="notice"><span class="required"></span> indicates required information.</p>
+        </div>
+        <form class="booking_form" action="">
+          <div class="row">
+            <div class="col-25">
+              <label for="first_name" class="required">First Name</label>
+            </div>
+            <div class="col-75">
+              <input id="fname" name="first_name" type="text" required placeholder="Please provide your first name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="last_name" class="required">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input id="lname" name="last_name" type="text" required placeholder="Please provide your last name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email" class="required">Email</label>
+            </div>
+            <div class="col-75">
+              <input id="email" name="email" type="email" required placeholder="Please provide a valid email address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="phone">Phone</label>
+            </div>
+            <div class="col-75">
+              <input id="phone" name="phone" type="tel">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="no_people" class="required">Number of people</label>
+            </div>
+            <div class="col-75">
+              <input id="people" name="no_people" type="number" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="arrival" class="required">Arrival Date</label>
+            </div>
+            <div class="col-75">
+              <input id="arrival" name="arrival" type="date" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="departure" class="required">Departure Date</label>
+            </div>
+            <div class="col-75">
+              <input id="departure" name="departure" type="date" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="info">Additional information</label>
+            </div>
+            <div class="col-75">
+              <textarea id="info" name="info" placeholder="Any special requirements or information you like to provide to us." style="height:200px"></textarea>
+            </div>
+          </div>
+        <input class="signup-btn" type="submit" value="Book now">
+      </form>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; The Odin Project 2023</p>
+      <p>Created by Kami Lam</p>
+      <div class="icon-wrapper flex-centering">
+          <a href="https://github.com/kamiviolet/" id="profile-link" target="_blank">
+              <i class="fa-brands fa-github fa-2xl"></i>
+          </a>
+          <a href="https://codepen.io/kami-lam" id="profile-link" target="_blank">
+              <i class="fa-brands fa-codepen fa-2xl"></i>
+          </a>
+          <a href="https://www.freecodecamp.org/kamiviolet" id="profile-link" target="_blank">
+              <i class="fa-brands fa-free-code-camp fa-2xl"></i>
+          </a>
+      </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

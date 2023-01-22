@@ -147,6 +147,7 @@ section[role="info"] {
   background-color: rgb(211, 252, 214);
   width: 80vw;
   max-width: 750px;
+  margin: 0;
 }
 
 section[role="info"] h2 {
@@ -175,7 +176,7 @@ section[role="reviews"] {
   margin-inline: 2.5rem;
   overflow-y: hidden;
   overflow-x: auto;
-  height: min-content;
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -139,11 +139,15 @@ const reviews = document.querySelectorAll(".reviews_wrapper blockquote");
 let currReview = 1;
 showReview(currReview);
 
-function changeReview(n) {
-    showReview(currReview += n);
+function prevReview() {
+    showReview(currReview -= 1);
   }
+  
+function nextReview() {
+  showReview(currReview += 1);
+}
 
-function showReview(n) { 
+function showReview(n, flip) { 
   if (n > reviews.length) {
       currReview = 1;
   }
@@ -152,7 +156,13 @@ function showReview(n) {
   }
 
   reviews.forEach((review)=>{
-    review.classList.remove("top");
+    if (review.classList.contains("top")) {
+      review.classList.replace("top", "hidden");
+    }
+    review.classList.add("hidden");
   })
-  reviews[currReview -1].classList.add("top");
+  reviews[currReview -1].classList.replace("hidden", "top");
 }
+
+  toLeft.addEventListener("click", prevReview);
+  toRight.addEventListener("click", nextReview);

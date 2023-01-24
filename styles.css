@@ -230,7 +230,7 @@ section[role="signup"] {
   max-width: 75vw;
   padding: 2rem;
   margin: 2rem;
-  background-color: rgb(203, 230, 240);
+  background-color: rgb(228, 228, 228);
   border-radius: 5px;
 }
 
@@ -273,7 +273,8 @@ section[role="signup"] {
   display: flex;
   flex-direction: column;
   color:rgb(0, 0, 0);
-  background-color: rgb(243, 251, 255);
+  background-color: rgb(241, 241, 241);
+  box-shadow: gray 0 0 1px;
   border-radius: 5px;
 }
 
@@ -367,14 +368,15 @@ h1 {
 
     position: fixed;
     top: 0;
-    right: -320px;
+    right: -35vw;
     height: 100vh;
-    width: 320px;
+    width: 35vw;
     padding-top: 100px;
     background-color: rgb(31, 73, 38);
     transform: translateX(100%);
     transition-property: transform;
     transition-duration: 1.5s;
+    font-size: medium;
   }
 
   .cross + [role="responsive_navbar"] {
@@ -396,7 +398,7 @@ h1 {
   }
 
   .info-subsection {
-    width: 85vw;
+    width: 90vw;
     padding: 0;
     flex-direction: column;
   }
@@ -424,6 +426,10 @@ h1 {
   .reviews_wrapper blockquote {
     width: 100%;
     position: absolute;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .top {
@@ -468,7 +474,7 @@ h1 {
 
   section[role="signup"] {
     height: fit-content;
-    padding-block: 5rem;
+    padding-block: 2rem;
   }
 
   .signup-container {
@@ -476,8 +482,17 @@ h1 {
     padding: 0;
   }
 
+  
+.signup-wrapper {
+  max-width: 90vw;
+  padding: 1rem;
+  margin: .5rem;
+}
+
+
   .signup-content-wrapper {
     width: 100%;
+    font-size: medium;
   }
 
   .booking_form {
